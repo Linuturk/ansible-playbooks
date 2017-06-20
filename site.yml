@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  become: yes
+  connection: local
+  roles:
+    - sudo
+- hosts: onitato
+  become: yes
+  roles:
+    - fail2ban
+    - firewall
+    - sshd
+    - sudo
+- hosts: bastions
+  roles:
+    - authorized_keys
