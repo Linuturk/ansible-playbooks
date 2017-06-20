@@ -1,0 +1,4 @@
+---
+# defaults file for firewall
+open_ports:
+  - 22
