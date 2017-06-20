@@ -1,0 +1,12 @@
+---
+# tasks file for authorized_keys
+- name: Ensure .ssh directory exists
+  file: path=/home/{{ username }}/.ssh state=directory owner={{ username }} group={{ groupname }} mode=0700
+
+- name: Download keys from GitHub
+  get_url: url={{ keys.url }} dest=/home/{{ username }}/.ssh/authorized_keys owner={{ username }} group={{ groupname }} mode=0600 checksum={{ keys.checksum }} force=yes
+  when: not (ansible_distribution == "RedHat" and ansible_distribution_major_version == "5")
+
+- name: Download keys from GitHub
+  get_url: url={{ keys.url }} dest=/home/{{ username }}/.ssh/authorized_keys owner={{ username }} group={{ groupname }} mode=0600 checksum={{ keys.checksum }} force=yes validate_certs=False
+  when: ansible_distribution == "RedHat" and ansible_distribution_major_version == "5"
