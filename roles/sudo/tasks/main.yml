@@ -1,0 +1,4 @@
+---
+# tasks file for sudo
+- name: Write out file for password-less sudo
+  template: src=nopasswd.j2 dest=/etc/sudoers.d/nopasswd owner=root group=root mode=0440
