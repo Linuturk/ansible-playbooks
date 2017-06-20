@@ -1,0 +1,7 @@
+---
+# tasks file for fail2ban
+- name: Install fail2ban
+  apt: name=fail2ban state=latest
+
+- name: Ensure fail2ban is running
+  service: name=fail2ban state=running
