@@ -1,0 +1,7 @@
+---
+# tasks file for mumble
+- name: Install mumble server
+  apt: name=mumble-server state=latest
+
+- name: Ensure mumble is running
+  service: name=mumble-server state=running
