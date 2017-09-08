@@ -4,4 +4,4 @@
   apt: name=fail2ban state=latest
 
 - name: Ensure fail2ban is running
-  service: name=fail2ban state=running
+  service: name=fail2ban state=started

@@ -1,0 +1,2 @@
+username: "{{ vault_local_username }}"
+groupname: "{{ vault_local_groupname }}"

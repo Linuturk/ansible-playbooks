@@ -1,10 +1,15 @@
 ---
 - hosts: localhost
+  vars_files:
+    - vault.yml
   become: yes
   connection: local
   roles:
     - sudo
+
 - hosts: onitato
+  vars_files:
+    - vault.yml
   become: yes
   roles:
     - fail2ban

@@ -1,2 +1,2 @@
-username: linuturk
-groupname: linuturk
+username: "{{ vault_username }}"
+groupname: "{{ vault_groupname }}"
