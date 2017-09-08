@@ -1,6 +1,0 @@
----
-# defaults file for authorized_keys
-keys:
-  url: https://github.com/username.keys
-  sha256sum: 8ecd998e657c9376a529777c61d2901ce9bdbf9d4e63ee4b0372e7b429a09f38
-  checksum: sha1:fb5f1f6c5742a50d38ab6797ebd478706d056ed0

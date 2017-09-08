@@ -11,6 +11,3 @@
     - firewall
     - sshd
     - sudo
-- hosts: bastions
-  roles:
-    - authorized_keys

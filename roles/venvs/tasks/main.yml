@@ -1,5 +1,0 @@
----
-# tasks file for venvs
-- name: Install tools in virtual env
-  pip: name='{{item}}' state=latest virtualenv='/home/{{username}}/venvs' virtualenv_site_packages=yes
-  with_items: '{{packages}}'

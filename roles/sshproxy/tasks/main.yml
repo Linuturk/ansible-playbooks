@@ -1,4 +1,0 @@
----
-# tasks file for sshproxy
-- name: Write out the SSH proxy configuration
-  template: src=config.j2 dest=/home/{{ username }}/.ssh/config owner={{ username }} group={{ groupname }} mode=660
